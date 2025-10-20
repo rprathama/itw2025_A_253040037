@@ -4,34 +4,98 @@
     <title>ini judul</title>
 </head>
 <body>
-<table align="center" cellspace="1">
+<table  cellspacing="1" border="4" width="30%" cellpadding="20">
     <tr bgcolor="grey">
-        <th colspan="6">INPUT DATA MAHASISWA</th>
+        <th colspan="8">INPUT DATA MAHASISWA</th>
     </tr>
-    <tr bgcolor="white"><th>username</th>
+    <tr><th>username</th>
     <th>:</th>
 <th>
-    <form>
+    <form align="left">
 <input type="text">
 </form>
 </th>
 </tr>
 
 <tr>
-    <th>Pasword</th>
+    <td>Pasword</td>
     <th>:</th>
-    <th><form>
-<input type="text">
+    <th><form align="left">
+<input type="password">
 </form></th>
 </tr>
 
 <tr>
     <th>Full name</th>
     <th>:</th>
-     <th><form>
+     <th><form align="left">
 <input type="text">
 </form></th>
 </tr>
+
+<tr><th>E-mail</th>
+<th>:</th>
+ <th><form align="left">
+<input type="text">
+</form></th>
+</tr>
+
+<tr><th>Agama</th>
+<th>:</th>
+<th colspan="8">
+    <select>
+        <option name="agama" selected>--Pilih Agama--</option>
+        <option value="Islam">Islam</option>
+        <option value="Kristen">Kristen</option>
+        <option value="Katolik">Katolik</option>
+        <option value="Hindu">Hindu</option>
+        <option value="Budha">Budha</option>
+        <option value="konghucu">Konghucu</option>
+    </select>
+</th></tr>
+
+<tr>
+    <th>
+Jenis kelamin
+</th>
+<th>:</th>
+<th>
+    <form  align="left">
+        <input type="radio" name="jenisKel" value="pria"> Pria
+        <input type="radio" name="JenisKel" value="Wanita"> Wanita
+    </form>
+</th>
+</tr>
+
+<tr>
+    <th>Hobi</th>
+    <th>:</th>
+    <th>
+        <form align="left">
+            <input type="checkbox" name="hobi" value="Musik">Musik
+            <input type="checkbox" name="hobi" value="olahraga">Olahraga
+            <input type="checkbox" name="hobi" value="Gaming">Gaming
+            <input type="checkbox" name="hobi" value="Lain nya">Lainnya
+        </form>
+    </th>
+</tr>
+
+<tr><th>Profil Singkat</th>
+<th>:</th>
+<th><form>
+<textarea name="Profil singkat" rows="4" cols="50"></textarea>
+</form>
+</th>
+</tr>
+
+<tr>
+    <th colspan="8">
+    <form align="right">
+        <input type="submit" name="input" value="input" >
+    </form>
+</th>
+</tr>
+
 </table>
 </body>
 </html>
