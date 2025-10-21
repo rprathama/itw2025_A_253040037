@@ -1,0 +1,26 @@
+body{background: aqua;
+font-family: Georgia, 'Times New Roman', Times, serif;}
+
+h1{
+    font-family:comic sans ms;
+font-size: 60px;
+color: darkblue;
+text-align: center;
+}
+
+h4{text-align: right;
+    font-style: italic;
+
+}
+
+p{
+    text-align: center;
+}
+
+#a1{
+    color: white;
+}
+
+#a2{
+    color: orange;
+}
