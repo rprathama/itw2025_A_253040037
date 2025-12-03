@@ -1,1 +1,115 @@
+ *{
+    margin: 0;
+    padding: 0;
+ }
+
  
+
+ /* navbar */
+ 
+ nav{
+    display: flex;
+    background: linear-gradient(90deg,  #3c0d3d, #1e3c72);
+    justify-content: space-around;
+    padding: 20px 0;
+    color: white;
+    align-items: center;
+ }
+
+ nav ul{
+    display: flex;
+    list-style: none;
+   
+    justify-content: space-between;
+    width: 40%;
+     font-family: "Poppins", sans-serif;
+ }
+
+ nav ul li a{
+    color: white;
+    text-decoration: none;
+ }
+
+ nav .logo{
+ font-family: "Montserrat", sans-serif;
+ }
+
+ nav ul li a:hover{
+    color: black;
+ }
+
+/* hamburger menu */
+
+.menu-toggle {
+display: none;
+flex-direction: column;
+height: 20px;
+justify-content: space-between;
+position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -6px;
+    top: -5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+width: 28px;
+height: 3px;
+background-color: white;
+border-radius: 3px;
+transition: all 0.5s;
+}
+
+
+/* hamburger menu animation */
+.menu-toggle span:nth-child(2){
+transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+transform: rotate(45deg); translate: (-1px, -1px);
+}
+ 
+.menu-toggle input:checked ~ span:nth-child(4){
+transform: rotate(-40deg); translate: (0px, 0px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+transform:scale(0)
+}
+
+/* responsive breakpoint */
+
+ /* ukuran tablet */
+ @media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+ }
+
+ /* ukuran mobile */
+
+ @media screen and (max-width: 576px) {
+   .menu-toggle {
+    display: flex;
+   }
+    nav ul {
+        display: absolute;
+        right: 0;
+        top: 0;
+    height: 100%;
+        background-color: black;
+        align-items: center;
+    }
+}
