@@ -1,0 +1,95 @@
+/* Styling Dasar */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* --- BAGIAN 1: HERO ASIMETRIS --- */
+
+.hero-asimetris {
+    display: grid;
+    /* Membuat dua kolom: 40% untuk info, 60% untuk visual */
+    grid-template-columns: 40% 60%; 
+    gap: 30px;
+    padding: 100px 5%;
+    background-color: #5E6A7A; 
+    color: white;
+    position: relative; /* Penting untuk positioning anak elemen */
+    overflow: hidden; /* Mencegah elemen tumpang tindih keluar dari area */
+}
+
+.hero-info {
+    z-index: 10; /* Memastikan teks di atas gambar jika tumpang tindih */
+    padding-top: 50px;
+}
+
+/* KUNCI ASIMETRIS: Memposisikan gambar secara absolut dan menggesernya */
+.hero-visual {
+    position: relative;
+    height: 300px; /* Tinggi penampung visual */
+}
+
+.foto-tumpang-tindih {
+    position: absolute;
+    bottom: -20px; /* Gambar digeser ke bawah */
+    right: 50px; /* Gambar digeser keluar ke kanan */
+    width: 43%; /* Gambar lebih besar dari kolom 60% */
+    max-width: none; /* Mengabaikan max-width bawaan */
+    height: auto;
+    object-fit: cover;
+    opacity: 0.8; 
+}
+
+
+/* --- BAGIAN 2: PROYEK ASIMETRIS --- */
+
+.proyek-grid {
+    display: grid;
+    /* Membuat 3 kolom berukuran sama */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 50px 5%;
+}
+
+.proyek-card {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* KUNCI ASIMETRIS: Membuat satu kartu lebih besar dan digeser */
+.card-besar {
+    /* Membuat kartu ini menempati 2 kolom, bukan 1 */
+    grid-column: span 2; 
+}
+
+.card-geser {
+    /* Menggeser kartu ke atas dan ke kiri menggunakan margin negatif */
+    margin-top: -50px; 
+    margin-left: -20px;
+    z-index: 5; /* Memastikan kartu ini tampak di atas elemen lain */
+}
+
+/* Media Queries untuk Responsif (Penting untuk desain non-pasaran!) */
+@media (max-width: 768px) {
+    .hero-asimetris {
+        /* Di layar kecil, tata letak kembali ke satu kolom */
+        grid-template-columns: 1fr; 
+        padding: 50px 5%;
+    }
+    
+    .proyek-grid {
+        /* Di layar kecil, semua kartu kembali ke satu kolom */
+        grid-template-columns: 1fr;
+    }
+    
+    .card-besar {
+        grid-column: span 1; /* Reset span */
+    }
+    
+    .card-geser {
+        margin-top: 20px; /* Reset margin geser */
+        margin-left: 0;
+    }
+}

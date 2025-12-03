@@ -123,13 +123,11 @@ padding: 3px;
     position: absolute;
     inset: 0;
     background: rgba(red, green, blue, alpha);
-   
-    transition: backdrop-filter 0,5s ease;
-    z-index: 1;
+    transition: all 5s ease;
 }
 
 .heri:hover{
-    transform: scale(1.1);
+    transform: scale(1.02);
     backdrop-filter: blur(0px);
 }
 
